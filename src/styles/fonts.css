@@ -1,0 +1,27 @@
+/* woff2 : Super Modern Browsers */
+/* woff :Modern Browsers */
+
+@font-face {
+  font-family: 'Exo2.0';
+  font-style: normal;
+  font-weight: 100;
+  src: url('../assets/fonts/Exo2-Thin.woff2') format('woff2'),
+    url('../assets/fonts/Exo2-Thin.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Trebuchet MS';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../assets/fonts/TrebuchetMS.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Trebuchet MS';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../assets/fonts/TrebuchetMS-Bold.woff') format('woff');
+  font-display: swap;
+}
