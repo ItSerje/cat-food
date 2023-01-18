@@ -1,0 +1,7 @@
+.home {
+  /* font-family: var(--ff-title);
+  font-weight: var(--fw-thin); */
+
+  font-family: var(--ff-card);
+  font-weight: var(--fw-bold);
+}
