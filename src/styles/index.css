@@ -10,12 +10,16 @@
   --clr-gray-500: #666666;
   --clr-red-300: #d91667;
   --clr-red-200: #e52e7a;
+  --clr-yellow-300: #ffff66;
 
-  --clr-card-default: var(--clr-blue-400);
-  --clr-card-default-hover: var(--clr-blue-300);
-  --clr-card-selected: var(--clr-red-300);
-  --clr-card-selected-hover: var(--clr-red-200);
+  --clr-card-border-default: var(--clr-blue-400);
+  --clr-card-border-default-hover: var(--clr-blue-300);
+  --clr-card-border-selected: var(--clr-red-300);
+  --clr-card-border-selected-hover: var(--clr-red-200);
+
   --clr-card-disabled: var(--clr-gray-400);
+
+  --clr-card-background: var(--clr-gray-100);
 
   --ff-title: 'Exo2.0', sans-serif;
   --ff-card: 'Trebuchet MS', sans-serif;
