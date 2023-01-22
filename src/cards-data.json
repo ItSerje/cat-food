@@ -21,7 +21,7 @@
     "productSpecs": ["**40** порций", "**2** мыши в подарок"],
     "productWeight": "2",
     "productWeightUnit": "кг",
-    "cardCtaText": "Чего сидишь? Порадуй котэ, купи.",
+    "cardCtaText": "Чего сидишь? Порадуй котэ, [купи.](#)",
     "cardCtaTextSelected": "Головы щучьи с чесноком да свежайшая сёмгушка.",
     "cardCtaTextDisabled": "Печалька, с рыбой закончился."
   },
@@ -38,7 +38,7 @@
     ],
     "productWeight": "5",
     "productWeightUnit": "кг",
-    "cardCtaText": "Чего сидишь? Порадуй котэ, купи.",
+    "cardCtaText": "Чего сидишь? Порадуй котэ, [купи.](#)",
     "cardCtaTextSelected": "Филе из цыплят с трюфелями в бульоне.",
     "cardCtaTextDisabled": "Печалька, с курой закончился.",
     "disabled": true
