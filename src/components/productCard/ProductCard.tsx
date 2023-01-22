@@ -1,4 +1,4 @@
-import { FC, useEffect, useLayoutEffect, useRef, useState } from 'react';
+import React, { FC, useEffect, useLayoutEffect, useRef, useState } from 'react';
 import { Card } from '../../models/Card';
 import './product-card.css';
 import ReactMarkdown from 'react-markdown';
@@ -13,6 +13,8 @@ interface ProductCardProps {
 
 const ProductCard: FC<ProductCardProps> = ({ card, selected, onClick }) => {
   const [isSelectedHovered, setIsSelectedHovered] = useState<boolean>(false);
+
+  const productCartContainerRef = useRef<HTMLDivElement>(null);
   const ctaContainerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -23,11 +25,54 @@ const ProductCard: FC<ProductCardProps> = ({ card, selected, onClick }) => {
           const span = document.createElement('span');
           span.textContent = item.textContent;
           span.addEventListener('click', onClick);
-          item.replaceWith(span);
+          //   item.replaceWith(span);
+          item.parentElement?.replaceChild(span, item);
         }
       });
     }
   }, [selected]);
+
+  useEffect(() => {
+    const mouseOutListener = () => {
+      setIsSelectedHovered(false);
+    };
+
+    const mouseOverListener = () => {
+      setIsSelectedHovered(true);
+    };
+
+    const clickListener = () => {
+      if (!selected) setIsSelectedHovered(false);
+    };
+
+    productCartContainerRef.current?.addEventListener(
+      'mouseout',
+      mouseOutListener
+    );
+    productCartContainerRef.current?.addEventListener(
+      'mouseover',
+      mouseOverListener
+    );
+    productCartContainerRef.current?.addEventListener('click', clickListener);
+
+    // return () => {
+    //   productCartContainerRef.current?.removeEventListener(
+    //     'mouseout',
+    //     mouseOutListener,
+    //     false
+    //   );
+    //   productCartContainerRef.current?.removeEventListener(
+    //     'mouseover',
+    //     mouseOverListener,
+    //     false
+    //   );
+    //   productCartContainerRef.current?.removeEventListener(
+    //     'click',
+    //     clickListener,
+    //     false
+    //   );
+    // };
+  }, []);
 
   return (
     <article
@@ -37,23 +82,8 @@ const ProductCard: FC<ProductCardProps> = ({ card, selected, onClick }) => {
     >
       <div
         className='product-card__container'
-        onClick={(e) => {
-          onClick();
-          e.target.addEventListener(
-            'mouseout',
-            () => {
-              e.target.addEventListener('mouseover', () =>
-                setIsSelectedHovered(true)
-              );
-              e.target.addEventListener('mouseout', () =>
-                setIsSelectedHovered(false)
-              );
-            },
-            {
-              once: true,
-            }
-          );
-        }}
+        ref={productCartContainerRef}
+        onClick={onClick}
       >
         <div className='product-card__text-block'>
           <div className='product-card__product-type'>
