@@ -5,10 +5,10 @@
     "productTypeSelectedHover": "Котэ не одобряет?",
     "productTitle": "Нямушка",
     "productSubtitle": "с фуа-гра",
-    "productSpecs": ["<b>10</b> порций", "мышь в подарок"],
+    "productSpecs": ["**10** порций", "мышь в подарок"],
     "productWeight": "0,5",
     "productWeightUnit": "кг",
-    "cardCtaText": "Чего сидишь? Порадуй котэ, купи.",
+    "cardCtaText": "Чего сидишь? Порадуй котэ, [купи.](#)",
     "cardCtaTextSelected": "Печень утки разварная с артишоками.",
     "cardCtaTextDisabled": "Печалька, с фуа-гра закончился."
   },
@@ -18,7 +18,7 @@
     "productTypeSelectedHover": "Котэ не одобряет?",
     "productTitle": "Нямушка",
     "productSubtitle": "с рыбой",
-    "productSpecs": ["40 порций", "2 мыши в подарок"],
+    "productSpecs": ["**40** порций", "**2** мыши в подарок"],
     "productWeight": "2",
     "productWeightUnit": "кг",
     "cardCtaText": "Чего сидишь? Порадуй котэ, купи.",
@@ -31,11 +31,16 @@
     "productTypeSelectedHover": "Котэ не одобряет?",
     "productTitle": "Нямушка",
     "productSubtitle": "с курой",
-    "productSpecs": ["100 порций", "5 мышей в подарок", "заказчик доволен"],
+    "productSpecs": [
+      "**100** порций",
+      "**5** мышей в подарок",
+      "заказчик доволен"
+    ],
     "productWeight": "5",
     "productWeightUnit": "кг",
     "cardCtaText": "Чего сидишь? Порадуй котэ, купи.",
     "cardCtaTextSelected": "Филе из цыплят с трюфелями в бульоне.",
-    "cardCtaTextDisabled": "Печалька, с курой закончился."
+    "cardCtaTextDisabled": "Печалька, с курой закончился.",
+    "disabled": true
   }
 ]
