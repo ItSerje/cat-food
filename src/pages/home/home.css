@@ -1,7 +1,18 @@
-.home {
-  /* font-family: var(--ff-title);
-  font-weight: var(--fw-thin); */
+body {
+  background-image: url('../../assets/img/background-pattern@2x.png');
+  background-image: image-set(
+    url('../../assets/img/background-pattern@1x.png') 1x,
+    url('../../assets/img/background-pattern@2x.png') 2x
+  );
+  background-repeat: repeat-y;
+  background-size: cover;
+}
 
-  font-family: var(--ff-card);
-  font-weight: var(--fw-bold);
+@media (max-width: 500px) {
+  body {
+    background-image: image-set(
+      url('../../assets/img/background-pattern@1x.png') 1x,
+      url('../../assets/img/background-pattern@1x.png') 2x
+    );
+  }
 }
