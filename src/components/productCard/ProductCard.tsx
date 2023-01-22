@@ -45,33 +45,15 @@ const ProductCard: FC<ProductCardProps> = ({ card, selected, onClick }) => {
       if (!selected) setIsSelectedHovered(false);
     };
 
-    productCartContainerRef.current?.addEventListener(
-      'mouseout',
-      mouseOutListener
-    );
-    productCartContainerRef.current?.addEventListener(
-      'mouseover',
-      mouseOverListener
-    );
+    productCartContainerRef.current?.addEventListener('mouseleave', () => {
+      mouseOutListener();
+      console.log('mouse out');
+    });
+    productCartContainerRef.current?.addEventListener('mouseenter', () => {
+      mouseOverListener();
+      console.log('mouse over');
+    });
     productCartContainerRef.current?.addEventListener('click', clickListener);
-
-    // return () => {
-    //   productCartContainerRef.current?.removeEventListener(
-    //     'mouseout',
-    //     mouseOutListener,
-    //     false
-    //   );
-    //   productCartContainerRef.current?.removeEventListener(
-    //     'mouseover',
-    //     mouseOverListener,
-    //     false
-    //   );
-    //   productCartContainerRef.current?.removeEventListener(
-    //     'click',
-    //     clickListener,
-    //     false
-    //   );
-    // };
   }, []);
 
   return (
