@@ -10,4 +10,5 @@ export interface Card {
   cardCtaText?: string;
   cardCtaTextSelected?: string;
   cardCtaTextDisabled?: string;
+  disabled?: boolean;
 }
