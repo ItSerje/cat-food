@@ -45,7 +45,7 @@
     0 100%,
     0% var(--edge-size)
   );
-  transition: background 250ms;
+  transition: background 0.1s;
 }
 
 /* .product-card__container::before {
