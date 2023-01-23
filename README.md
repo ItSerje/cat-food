@@ -1,46 +1,39 @@
-# Getting Started with Create React App
+# Responsive верстка
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Развернутая страница: [cat-food-app.netlify.app](https://cat-food-app.netlify.app/).
 
-## Available Scripts
+## ТЗ
 
-In the project directory, you can run:
+Сверстайте страницу, показанную на рисунке. Внешний вид должен полностью
+соответствовать макету, а поведение — описанию задачи. Макет находится в папке
+prototype, описание задачи ниже.
 
-### `npm start`
+![Model](https://user-images.githubusercontent.com/66359825/214067892-742e0996-7903-4f3c-8b38-ae62faf5a8e3.jpg)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+1. Фон занимает всю площадь экрана, блок находится по центру вертикально и
+   горизонтально.
+2. На планшетах упаковки располагаются треугольником, на смартфонах друг под
+   другом.
+3. Информация о продукте может меняться.
+4. Каждая из упаковок может быть выбрана или недоступна для выбора. Выбор
+   осуществляется нажатием на упаковку или на текст «купи» в описании.
+5. Можно выбрать одновременно несколько упаковок, а также отменить свой
+   выбор повторным нажатием на упаковку.
+6. Состояние наведения применяется к выбранной упаковке не сразу, а после того,
+   как курсор ушел с нее после первоначального выбора.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+[Файлы задания](https://dl.funbox.ru/qt-html-css-js.zip)
 
-### `npm test`
+## Комментарий к работе
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Стек: React, TypeScript, CSS, react-markdown, Create React Application
 
-### `npm run build`
+Верстка практически pixel perfect:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![Overlay](https://user-images.githubusercontent.com/66359825/214074937-faf9d7c8-8c2d-4148-9d8c-cc631895a8b6.jpg)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Карточки продуктов генерируются динамически из данных в файле <code>card-data.json</code>, и при необходимости можно легко начать использовать данные с сервера.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Некоторые символы в строках имеют индивидуальное форматирование, например, цифры выделены жирным шрифтом. Для поддержки форматирования при передаче данных в формате json используется язык разметки Markdown (библиотека <code>react-markdown</code> — безопасная альтернатива dangerouslySetInnerHTML для защиты от XSS-атак).
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+Совместимость со старыми браузерами обеспечивают настройки в package.json, а также библиотека <code>react-app-polyfill</code>. При этом в связи с прекращением поддержки IE11 со стороны Microsoft было принято решение не обеспечивать совместимость с этим браузером.
